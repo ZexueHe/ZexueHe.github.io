@@ -36,6 +36,7 @@
     heading {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 24px;
+      font-weight: 700;
     }
     
     papertitle {
@@ -83,89 +84,275 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    /* Publication styles */
+    .publications-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .publications-controls {
+      text-align: left;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .publications-divider {
+      color: #666;
+      margin: 0 2px;
+    }
+
+    .view-toggle-link {
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      color: #1772d0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .view-toggle-link.active {
+      font-weight: 700;
+      color: #1772d0;
+    }
+
+    .view-toggle-link:hover {
+      color: #f09228;
+    }
+
+    .paper-tags {
+      margin: 6px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .paper-note {
+      color: #c62828;
+      font-weight: 600;
+      margin: 4px 0;
+    }
+
+    .paper-tag {
+      display: inline-block;
+      background-color: #e8f0ff;
+      color: #1772d0;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .paper-tag:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .year-header {
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+    }
+
+    .tag-filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .tag-filter-btn {
+      padding: 6px 14px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      transition: all 0.2s;
+    }
+
+    .tag-filter-btn:hover {
+      border-color: #1772d0;
+      color: #1772d0;
+    }
+
+    .tag-filter-btn.active {
+      background-color: #1772d0;
+      color: white;
+      border-color: #1772d0;
+    }
+
+    .publications-section {
+      display: none;
+    }
+
+    .publications-section.active {
+      display: block;
+    }
+
+    #publications-container {
+      padding: 0 20px;
+    }
+
+    .paper-item {
+      margin-bottom: 6px;
+      padding: 4px 6px;
+    }
+
+    .paper-item.hidden {
+      display: none;
+    }
+
+    /* Navigation styles */
+    .navbar {
+      background-color: white;
+      padding: 12px 0;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin-bottom: 20px;
+    }
+
+    .navbar-container {
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .navbar a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .navbar a:hover {
+      color: inherit;
+    }
     
   </style>
-  <link rel="icon" type="image/png" href="images/UCSD.png">
+  <link rel="icon" type="image/png" href="images/stanford_tree.png">
   <title>Zexue He</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="navbar-container">
+      <a href="#">Home</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <!-- <a href="#patent">Patent</a> -->
+      <a href="#education">Education</a>
+      <a href="#work-experience">Experience</a>
+      <a href="#scholarships">Scholarships & Awards</a>
+    </div>
+  </div>
+
   <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
       <td>
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
-            <td width="73%" valign="middle">
+            <td width="70%" valign="middle">
               <p align="center">
                 <name>Zexue He</name>
               </p>
-              <p>I recently recieved my Ph.D. </a> in Computer Science and Engineering department at University of California, San Diego, advised by <a href="https://cseweb.ucsd.edu/~jmcauley/"> Prof. Julian McAuley</a>.  I am now a researcher at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a> and an affiliate researcher at  <span style="color:#1772d0">MIT CSAIL</span>. Previously, I was an intern at the Microsoft Research and Google. <br><br>
+              <p>I'm a Postdoc Fellow at Human-Centered AI Institude (HAI) in Stanford University, working with <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Alex 'Sandy' Pentland </a>, <a href="https://yejinc.github.io/">Yejin Choi </a>, and <a href="https://www.brynjolfsson.com/">Erik Brynjolfsson</a>. 
+              I recieved my Ph.D. </a> in Computer Science and Engineering department at University of California, San Diego, advised by <a href="https://cseweb.ucsd.edu/~jmcauley/"> Prof. Julian McAuley</a>, and was honored to be awarded the <a href="https://research.ibm.com/university/awards/fellowships.html">IBM PhD Fellowship in 2022</a>. 
 
               </p>
-                 
+                <p>
+                  I previously spent two years as a Research Scientist at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a>, responsible for the safety and alignment training of IBM's multimodal foundation models (<a href="https://huggingface.co/ibm-granite">Granite Vision Series</a>). I also worked as an intern at the Microsoft Research and Google. <br><br>
+                </p>
+                <p align="center">
+                  <b>Contact:</b> <span style="color:#1772d0">zexueh [AT] stanford.edu</span> | <span style="color:#1772d0">zehe [AT] ucsd.edu</span>  <br> <b>Full Publications:</b> <a href="https://scholar.google.com/citations?user=Srp8J9wAAAAJ&hl=en">Google Scholar</a>
+                </p>
               </p>
-              <p>
-                My research focuses on advancing  <strong>Trustworthy NLP to address high-stakes human-centric tasks</strong>, e.g., in human healthcare and college admission. My works utilize human-centered design, diagnose the shortcomings of existing models, and develop AI-driven solutions that are more responsible and better satisifies human needs in real life, with less labor effort and cost:     
+              <!-- <p>
+               <strong><span style="color:green"> [Research highlight] </span></strong> My research advances human-centered Large Language Models and Vision-Language Models that can remember, reason, and act reliably in complex decision-making environments:
                 <ul>
-                  <li> <strong> <span style="color:green"> Trustworthy NLP</span></strong>: enhance the <u>fairness, harmlessness, robustness, interpretability</u>, and <u>controllability</u> of LLMs; </li>
-                  <li><strong> <span style="color:green"> AI for Social Good</span> </strong>: build <u>NLP for Healthcare, AI for Low-Resource,</u> and <u>AI for Therapy.</u></li>
-                  <li><strong><span style="color:green"> Learning from Humans</span></strong>: understand human <u>cognitive behaviors, brain functions</u>, and <u>reading behaviors</u> </li>
+                  <li><strong><span style="color:black"> When models must be safe and aligned with humans</span></strong>: I work on LLM safety and alignment, building loyal agents and personalized AI systems that reason under uncertainty while respecting diverse human preferences.</li>
+                  <li> <strong> <span style="color:black"> When the modeling horizon is long</span></strong>: 
+                  I develop memory-augmented LLMs and agentic architectures that support persistent state tracking, structured long-context reasoning, and multi-session decision-making.
+                 </li>
+                  <li><strong> <span style="color:black"> When applications are high-stakes:</span> </strong>: I design and evaluate the reliability and societal impact LLMs for human-centered domains such as healthcare, low-resource settings, education, and employment. </li>
+
                  
                 </ul>
-                
-
-                <span style="color:red"> <b>News</b></span> : I am honored to be awarded the <a href="https://research.ibm.com/university/awards/fellowships.html">IBM PhD Fellowship 2022</a> !
-              </p>
+               </p> -->
              
               
             </td>
-            <td width="27%">
-              <img src="images/ZexueHe_photo.jpg" width="120%">
+            <td width="30%" style="text-align: center;">
+              <img src="images/ZexueHe_photo.jpg" width="107%" style="display: block; margin: 0 auto;">
             </td>
           </tr>
         </table>
-        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="20">
-          <td width="70%" valign="middle">
-          <tr>
 
-            <p align=center> <b>Contact: </b>  <span style="color:#1772d0">zexueh AT mit.edu</span> or <span style="color:#1772d0">zehe AT ucsd.edu</span>    
-
-              <!-- <a href="mailto:zehe@eng.ucsd.edu">Email</a> &nbsp/&nbsp
-              <a href="https://scholar.google.com/citations?user=-JrCM0AAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp/&nbsp
-              <a href="https://dblp.uni-trier.de/pers/hd/h/He:Zexue">DBLP</a> &nbsp
-               -->
-            </p>
-            <p align=center> <b>Full Publications: </b> <a href=https://scholar.google.com/citations?user=Srp8J9wAAAAJ&hl=en>Google Scholar</a>
-
-              <!-- <a href="mailto:zehe@eng.ucsd.edu">Email</a> &nbsp/&nbsp
-              <a href="https://scholar.google.com/citations?user=-JrCM0AAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp/&nbsp
-              <a href="https://dblp.uni-trier.de/pers/hd/h/He:Zexue">DBLP</a> &nbsp
-               -->
-            </p>
-            </tr>
-            </td>
-            </table>
-        
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr style="background-color: #f0f4f8;">
+                <td width="100%" valign="middle">
+                  <heading id="news">Research Highlights</heading>
+                  <table>
+                    <tbody>
+                      <p>
+                          
+                   My research advances human-centered Large Language Models and Vision-Language Models that can remember, reason, and act reliably in complex and failure-prone decision-making settings:
+                  <ul>
+                  <li><strong><span style="color:black"> When models must be safe and aligned with humans</span></strong>: I work on LLM safety and alignment, building loyal agents and personalized AI systems that reason under uncertainty while respecting diverse human preferences.</li>
+                  <li> <strong> <span style="color:black"> When the modeling horizon is long</span></strong>: 
+                  I develop memory-augmented LLMs and agentic architectures that support persistent state tracking, structured long-context reasoning, and multi-session decision-making.
+                 </li>
+                  <li><strong> <span style="color:black"> When applications are high-stakes:</span> </strong>: I design and evaluate the reliability and societal impact LLMs for human-centered domains such as healthcare, low-resource settings, education, and employment. </li>
+                  </ul>
+                      </p>
+                    </tbody>
+                   </table>
+                </td>
+                </tr>
+              </tbody>
+        </table>
         
             <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="100%" valign="middle">
-                  <heading>News</heading>
+                  <heading id="news">News</heading>
                   <table>
                     <tbody>
                       <p>
                         <ul>
-                          <li> <strong> Oct. 2025</strong>: I will organize the first workshop on <i> Memory and Vision </i> at <strong>ICCV 2025</strong>. </li>
-                          <li> <strong> July 2025</strong>: I will organize the second workshop on <i>Long-Context Foundation Models</i> at <strong>ICML 2025</strong>. </li>
-                          <li> <strong> Apirl 2025</strong>: Invited panlist on <i> New Frontiers in Associative Memories Workshop </i> at <strong>ICLR 2025</strong>. </li>
-                          <li> <strong> Apirl 2025</strong>: Invited talk on <i>Safe AI and NLP for High-Stakes Human-Centric Tasks </i> at <strong>Yale</strong>. </li>
-                          <li> <strong> Mar. 2025</strong>: Invited talk on <i>Trustworthy AI for High-Stakes Human-Centric Tasks </i> at <strong>UMiami</strong>. </li>
-                          <li> <strong> Jan. 2025</strong>: Invited talk on <i>Responsible AI for High-Stakes Human-Centric Domains </i> at <strong>Tufts</strong>. </li>
-                          <li> <strong> Jan. 2025</strong>: Invited talk on <i>Responsible and Trustworthy AI</i> at <strong>UCLA</strong>.</li>
-                          <li><strong> Nov. 2025 </strong>: Invited talk on <i>Responsible AI for Human-centered Challenges</i> at <strong>MIT</strong>.</li>
-                          <li><strong>Oct. 2024</strong>: Talk on  <i>Trustworthy GenAI</i> at <strong>UCSD</strong> CSE.  </li>
+                          <li> <strong> [3/2026]</strong>: I will present at Gates Foundation Workshop on <i> Future of Personal AI: Global Portable Memory Workshop </i> in <strong> Seattle</strong>. </li>
+                          <li> <strong> [2/2026]</strong>: I'm co-organizing the first workshop on <i> Emerging Directions in Data for Multimodal Foundation Models </i> at <strong> CVPR 2026</strong>. </li>
+                          <li> <strong> [10/2025]</strong>: I'm organizing the first workshop on <i> Memory and Vision </i> at <strong>ICCV 2025</strong>. </li>
+                          <li> <strong> [7/2025]</strong>: I'm organizing the second workshop on <i>Long-Context Foundation Models</i> at <strong>ICML 2025</strong>. </li>
+                          <li> <strong> [4/2025]</strong>: Invited panlist on <i> New Frontiers in Associative Memories Workshop </i> at <strong>ICLR 2025</strong>. </li>
+                          <li> <strong> [4/2025]</strong>: Invited talk on <i>Safe AI and NLP for High-Stakes Human-Centric Tasks </i> at <strong>Yale</strong>. </li>
+                          <li> <strong> [3/2025]</strong>: Invited talk on <i>Trustworthy AI for High-Stakes Human-Centric Tasks </i> at <strong>UMiami</strong>. </li>
+                          <li> <strong> [1/2025]</strong>: Invited talk on <i>Responsible AI for High-Stakes Human-Centric Domains </i> at <strong>Tufts</strong>. </li>
+                          <li> <strong> [1/2025]</strong>: Invited talk on <i>Responsible and Trustworthy AI</i> at <strong>UCLA</strong>.</li>
+                          <li><strong> [11/2024] </strong>: Invited talk on <i>Responsible AI for Human-centered Challenges</i> at <strong>MIT</strong>.</li>
+                          <li><strong> [10/2024]</strong>: Talk on  <i>Trustworthy GenAI</i> at <strong>UCSD</strong> CSE.  </li>
                          
                         </ul>
                         
@@ -177,11 +364,550 @@
 
         <!-- Education -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          
+          
+     
+        <!-- research -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <div class="publications-header">
+                <heading id="publications">Publications</heading>
+                <div class="publications-controls">
+                  <span class="publications-divider">/</span>
+                  <span class="view-toggle-link active" onclick="switchView('year', this)">view by year</span>
+                  <span class="publications-divider">/</span>
+                  <span class="view-toggle-link" onclick="switchView('tag', this)">view by topic</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        
+        <!-- Publications Container -->
+        <div id="publications-container"></div>
+
+        <script>
+          // Tag color scheme - assign each tag a unique color
+          const tagColors = {
+            "LLM Memory and Long-context Modeling": { bg: "#e3f2fd", text: "#1565c0" },
+            "LLM": { bg: "#f3e5f5", text: "#6a1b9a" },
+            "CV": { bg: "#f3e5f5", text: "#6a1b9a" },
+            "VLM": { bg: "#f3e5f5", text: "#6a1b9a" },
+            "Safety and Alignment > Robustness": { bg: "#e8f5e9", text: "#1b5e20" },
+            "Safety and Alignment > Toxicity, Bias and Fairness": { bg: "#e8f5e9", text: "#1b5e20" },
+            "Safety and Alignment > Interpretability": { bg: "#e8f5e9", text: "#1b5e20" },
+            "Safety and Alignment > Disambiguation": { bg: "#e8f5e9", text: "#1b5e20" },
+            "LLM Agents": { bg: "#ede7f6", text: "#3f51b5" },
+            "Reinforcement Learning":{ bg: "#eceff1", text: "#37474f" },
+            "Synthetic Data Generation": { bg: "#f3e5f5", text: "#7b1fa2" },
+            "AI for Healthcare": { bg: "#ffebee", text: "#b71c1c" },
+            "AI for Low-Resource Languages": { bg: "#ede7f6", text: "#512da8" },
+            "Long-context Modeling": { bg: "#e3f2fd", text: "#1565c0" },
+            "Cognition-inspired Modeling": { bg: "#ebf5fb", text: "#0c3483" },
+            "Learning from Interactions": { bg: "#fce4ec", text: "#c2185b" },
+            "Personalized AI": { bg: "#f3e5f5", text: "#6a1b9a" },
+            "Human-AI Collaboration": { bg: "#f3e5f5", text: "#6a1b9a" }
+          };
+
+          // Get color for a tag
+          function getTagColor(tag) {
+            return tagColors[tag] || { bg: "#eceff1", text: "#37474f" };
+          }
+
+          // Publication data with tags and year
+          const papers = [
+          {
+              id: 29,
+              title: "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+              link: "https://arxiv.org/abs/2510.00232",
+              authors: "<strong>Zexue He</strong>*, Yu Wang*, Churan Zhi*, Yuanzhe Hu*, Tzu-Ping Chen*, Lang Yin*, Ze Chen, Tong Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland ",
+              venue: "Arxiv Preprint",
+              year: 2026,
+              tags: ["LLM Agents", "LLM Memory and Long-context Modeling"],              
+            },
+          {
+              id: 28,
+              title: "Composition-Grounded Instruction Synthesis for Visual Reasoning",
+              link: "https://arxiv.org/abs/2510.15040",
+              authors: "Xinyi Gu, Jiayuan Mao, Zhang-Wei Hong, Zhuoran Yu, Pengyuan Li, Dhiraj Joshi, Rogerio Feris, <strong>Zexue He</strong>",
+              venue: "ICLR",
+              year: 2026,
+              tags: ["VLM", "Reinforcement Learning"],
+              
+            },
+            {
+              id: 27,
+              title: "Discovering Hierarchical Software Engineering Agents via Bandit Optimization",
+              link: "https://arxiv.org/pdf/2512.23631",
+              authors: "Iris Xu, Guangtao Zeng, <strong>Zexue He</strong>, Charles Jin, Aldo Pareja, Dan Gutfreund, Chuang Gan, Zhang-Wei Hong",
+              venue: "ICLR",
+              year: 2026,
+              tags: ["LLM Agents", "Reinforcement Learning"],              
+            },
+          {
+              id: 26,
+              title: "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+              link: "https://arxiv.org/abs/2510.00232",
+              authors: "Xin Xu, Xunzhi He, Churan Zhi, Ruizhe Chen, Julian McAuley, <strong>Zexue He</strong>",
+              venue: "ICLR",
+              year: 2026,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "LLM"],              
+            },
+           
+          {
+              id: 25,
+              title: "Granite Vision: a lightweight, open-source multimodal model for enterprise Intelligence",
+              link: "https://arxiv.org/abs/2502.09927",
+              authors: "IBM Granite Vision Team. <br> <a href='https://huggingface.co/ibm-granite/granite-vision-3.3-2b'>HuggingFace Model Cards</a>",
+              venue: "Technical Report 2025",
+              year: 2025,
+              tags: ["VLM"],
+              note: '44k Download Last Month on HuggingFace.'
+              
+            },
+
+            {
+              id: 24,
+              title: "M+: Extending MemoryLLM with Scalable Long-Term Memory",
+              link: "https://arxiv.org/abs/2502.00592",
+              authors: "Yu Wang, Dmitry Krotov, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, <strong>Zexue He</strong>",
+              venue: "ICML 2025",
+              year: 2025,
+              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling", "LLM"],
+            },
+            {
+              id: 23,
+              title: "Large Scale Knowledge Washing",
+              link: "https://arxiv.org/abs/2403.00811",
+              authors: "Yu Wang, Ruihan Wu, <strong>Zexue He</strong>, Xiusi Chen, Julian McAuley",
+              venue: "ICLR 2025",
+              year: 2025,
+              tags: ["Safety and Alignment > Robustness", "LLM"]
+            },
+            {
+              id: 30,
+              title: "ChartGen: Scaling Chart Understanding Via Code-Guided Synthetic Chart Generation",
+              link: "https://arxiv.org/abs/2510.00232",
+              authors: "J. Kondic, P. Li, D. Joshi, <strong>Zexue He</strong>, S. Abedin, J. Sun, B. Wiesel, E. Schwartz, A. Nassar, B. Wu, A. Arbelle, A. Oliva, D. Gutfreund, L. Karlinsky, R. Feris",
+              venue: "ICCV Workshop on Curated Data for Efficient Learning",
+              year: 2025,
+              tags: ["VLM", "Synthetic Data Generation"],              
+            },
+            {
+              id: 1,
+              title: "Cognitive Bias in Decision-Making with LLMs",
+              link: "https://arxiv.org/abs/2403.00811",
+              authors: "Jessica Echterhoff, Yao Liu, Abeer Alessa, Julian McAuley, <strong>Zexue He</strong>",
+              venue: "EMNLP",
+              year: 2024,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "Cognition-inspired Modeling", "LLM"],
+              highlight: true
+            },
+            {
+              id: 2,
+              title: "Targeted Data Generation: Finding and Fixing Model Weaknesses",
+              link: "https://aclanthology.org/2023.acl-long.474.pdf",
+              authors: "<strong>Zexue He</strong>, Marco Tulio Ribeiro, Fereshte Khani",
+              venue: "ACL",
+              year: 2023,
+              tags: ["Safety and Alignment > Robustness", "Synthetic Data Generation", "Human-AI Collaboration", "LLM"]
+            },
+            {
+              id: 3,
+              title: "InterFair: Debiasing with Natural Language Feedback for Fair Interpretable Predictions",
+              link: "https://arxiv.org/abs/2210.07440.pdf",
+              authors: "Bodhi Majumder*, <strong>Zexue He*</strong>, Julian McAuley",
+              venue: "EMNLP",
+              year: 2023,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "Safety and Alignment > Interpretability", "Human-AI Collaboration", "LLM"],
+            },
+            {
+              id: 4,
+              title: "Controlling Bias Exposure for Fair Interpretable Predictions",
+              link: "https://arxiv.org/abs/2210.07455",
+              authors: "<strong>Zexue He</strong>, Yu Wang, Julian McAuley, Bodhisattwa Majumder",
+              venue: "EMNLP (Findings)",
+              year: 2022,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "Safety and Alignment > Interpretability", "LLM"]
+            },
+            {
+              id: 5,
+              title: "Leashing the Inner Demons: Self-Detoxification for Language Models",
+              link: "https://www.aaai.org/AAAI22Papers/AAAI-4620.XuC.pdf",
+              authors: "Canwen Xu, <strong>Zexue He</strong>, Zhankui He, Julian McAuley",
+              venue: "AAAI",
+              year: 2022,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "LLM"],
+              highlight: true
+            },
+            {
+              id: 6,
+              title: "Detect and Perturb: Neutral Rewriting of Biased and Sensitive Text via Gradient-based Decoding",
+              link: "https://arxiv.org/abs/2109.11708",
+              authors: "<strong>Zexue He</strong>, Bodhisattwa Majumder, Julian McAuley",
+              venue: "EMNLP (Findings)",
+              year: 2021,
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "LLM"]
+            },
+            {
+              id: 7,
+              title: "Learning Robust Representations by Projecting Superficial Statistics Out",
+              link: "https://openreview.net/forum?id=rJEjjoR9K7",
+              authors: "Haohan Wang, <strong>Zexue He</strong>, Zachary C. Lipton, Eric P. Xing",
+              venue: "ICLR",
+              year: 2019,
+              tags: ["Safety and Alignment > Robustness", "CV"],
+              highlight: true
+            },
+            {
+              id: 8,
+              title: "Leveraging gloss knowledge in neural word sense disambiguation by hierarchical co-attention",
+              link: "https://aclanthology.org/D18-1170.pdf",
+              authors: "Fuli Luo, Tianyu Liu, <strong>Zexue He</strong>, Qiaolin Xia, Zhifang Sui, Baobao Chang",
+              venue: "EMNLP",
+              year: 2018,
+              tags: ["Safety and Alignment > Disambiguation", "LLM"]
+            },
+
+            {
+              id: 9,
+              title: "A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation",
+              link: "https://arxiv.org/abs/2310.14088",
+              authors: "<strong>Zexue He</strong>, Yu Wang, An Yan, Yao Liu, Eric Y Chang, Amilcare Gentili, Julian McAuley, Chun-Nan Hsu",
+              venue: "EMNLP",
+              year: 2023,
+              tags: ["AI for Healthcare", "LLM"]
+            },
+            {
+              id: 10,
+              title: "Disambiguating Medical Reports via Contrastive Knowledge Infusion",
+              link: "http://arxiv.org/abs/2305.08300",
+              authors: "<strong>Zexue He</strong>, An Yan, Amilcare Gentili, Julian McAuley, Chun-Nan Hsu",
+              venue: "AAAI",
+              year: 2023,
+              tags: ["AI for Healthcare", "LLM"]
+            },
+            {
+              id: 11,
+              title: "Weakly Supervised Contrastive Learning for Chest X-Ray Report Generation",
+              link: "https://arxiv.org/abs/2109.12242",
+              authors: "An Yan, <strong>Zexue He</strong>, Xing Lu, Jiang Du, Eric Chang, Amilcare Gentili, Julian McAuley, Chun-Nan Hsu",
+              venue: "EMNLP (Findings)",
+              year: 2021,
+              tags: ["AI for Healthcare", "VLM"]
+            },
+            {
+              id: 12,
+              title: "Learning Concise and Descriptive Attributes for Visual Recognition",
+              link: "http://openaccess.thecvf.com/content/ICCV2023/papers/Yan_Learning_Concise_and_Descriptive_Attributes_for_Visual_Recognition_ICCV_2023_paper.pdf",
+              authors: "An Yan, Yu Wang, Yiwu Zhong, Chengyu Dong, <strong>Zexue He</strong>, Yujie Lu, William Wang, Jingbo Shang, Julian McAuley",
+              venue: "ICCV",
+              year: 2023,
+              tags: ["AI for Healthcare", "VLM"]
+            },
+            {
+              id: 13,
+              title: "Rapid and High-quality 3D Fusion for Human Brain's CT-MRI Heterogeneous Data",
+              link: "https://engine.scichina.com/publisher/scp/journal/SCIS/62/10/10.1007/s11432-018-9740-7?slug=fulltext",
+              authors: "<strong>Zexue He</strong>, Li Zhu, Minjie Li, Jinyao Li, Yiran Chen, Yanlin Luo",
+              venue: "SCIENCE CHINA Information Sciences",
+              year: 2019,
+              tags: ["AI for Healthcare", "CV"]
+            },
+            {
+              id: 14,
+              title: "Synthetic Pre-Training Tasks for Neural Machine Translation",
+              link: "https://arxiv.org/abs/2212.09864",
+              authors: "<strong>Zexue He*</strong>, Graeme Blackwood*, Rameswar Panda, Julian McAuley, Rogerio Feris",
+              venue: "ACL (Findings)",
+              year: 2023,
+              tags: ["Synthetic Data Generation", "AI for Low-Resource Languages", "LLM", "Safety and Alignment > Toxicity, Bias and Fairness"]
+            },
+            {
+              id: 15,
+              title: "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
+              link: "https://arxiv.org/abs/2401.00000",
+              authors: "Yu Wang, <strong>Zexue He</strong>, Zhankui He, Hao Xu, Julian McAuley",
+              venue: "AAAI",
+              year: 2024,
+              tags: ["Safety and Alignment > Interpretability", "LLM"]
+            },
+            {
+              id: 16,
+              title: "Towards lifespan cognitive systems",
+              link: "https://arxiv.org/pdf/2409.13265",
+              authors: "Y. Wang*, C. Han*, T. Wu*, X. He*, W. Zhou, N Sadeq, X Chen, <strong>Zexue He</strong>, W. Wang, G. Haffari, H. Ji, J. McAuley",
+              venue: "TMLR 02/2025",
+              year: 2025,
+              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling" ],
+            },
+            {
+              id: 17,
+              title: "CAMELoT: Towards Large Language Models with Training-Free Consolidated Associative Memory",
+              link: "https://arxiv.org/abs/2401.00000",
+              authors: "<strong>Zexue He</strong>, Leonid Karlinsky, Donghyun Kim, Julian McAuley, Dmitry Krotov, Rogerio Feris",
+              venue: "ICML, Long-Context Foundation Model Workshop",
+              year: 2024,
+              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling", "LLM"],
+              highlight: true
+            },
+            {
+              id: 18,
+              title: "WildFeedback: Aligning LLMs With In-situ User Interactions And Feedback",
+              link: "https://arxiv.org/abs/2408.15549",
+              authors: "T. Shi, Z. Wang, L. Yang, YC. Lin, <strong>Z. He</strong>, M. Wan, P. Zhou, S. Jauhar, X. Xu, X. Song, J. Neville",
+              venue: "NeurIPS, Behavioral ML Workshop",
+              year: 2024,
+              tags: ["Learning from Interactions", "LLM"]
+            },
+            {
+              id: 30,
+              title: "Lvchat: Facilitating long video comprehension",
+              link: "https://arxiv.org/abs/2401.00000",
+              authors: "Yu Wang, Zeyuan Zhang, Julian McAuley, <strong>Zexue He</strong>",
+              venue: "Arxiv Preprint",
+              year: 2024,
+              tags: ["LLM Memory and Long-context Modeling", "VLM"],
+              highlight: true
+            },
+            {
+              id: 19,
+              title: "A Large-Scale Study of Mobile Search Examination Behavior",
+              link: "https://dl.acm.org/doi/10.1145/3209978.3210099",
+              authors: "Xiaochuan Wang, Ning Su, <strong>Zexue He</strong>, Yiqun Liu, Shaoping Ma",
+              venue: "SIGIR 2018",
+              year: 2018,
+              tags: ["Learning from Interactions", "Cognition-inspired Modeling"]
+            },
+            {
+              id: 20,
+              title: "A Two-Stage Model for User's Examination Behavior in Mobile Search",
+              link: "https://dl.acm.org/doi/10.1145/3176349.3176891",
+              authors: "Jiaxin Mao, Yiqun Liu, Noriko Kando, <strong>Zexue He</strong>, Min Zhang, Shaoping Ma",
+              venue: "CHIIR",
+              year: 2018,
+              tags: ["Learning from Interactions", "Cognition-inspired Modeling"]
+            },
+            {
+              id: 21,
+              title: "Understanding Reading Attention Distribution during Relevance Judgment",
+              link: "https://dl.acm.org/doi/abs/10.1145/3269206.3271764",
+              authors: "Xiangsheng Li, Yiqun Liu, Jiaxin Mao, <strong>Zexue He</strong>, Min Zhang, Shaoping Ma",
+              venue: "CIKM",
+              year: 2018,
+              tags: ["Learning from Interactions", "Cognition-inspired Modeling"]
+            }
+          ];
+
+          // Initialize view
+          let currentView = 'year';
+          let selectedTag = null;
+
+          // Get all unique tags
+          function getAllTags() {
+            const tagSet = new Set();
+            papers.forEach(paper => {
+              paper.tags.forEach(tag => tagSet.add(tag));
+            });
+            return Array.from(tagSet).sort();
+          }
+
+          // Switch between views
+          function switchView(view, el) {
+            currentView = view;
+            selectedTag = null;
+            
+            // Update button states
+            document.querySelectorAll('.view-toggle-link').forEach(link => link.classList.remove('active'));
+            if (el) {
+              el.classList.add('active');
+            }
+            
+            renderPublications();
+          }
+
+          // Filter papers by tag
+          function filterByTag(tag) {
+            if (selectedTag === tag) {
+              selectedTag = null;
+            } else {
+              selectedTag = tag;
+              currentView = 'year'; // Switch to year view when filtering by tag
+            }
+            renderPublications();
+          }
+
+          // Reset to default view
+          function resetView() {
+            selectedTag = null;
+            currentView = 'year';
+            renderPublications();
+          }
+
+          // Check if paper matches the selected filter
+          function paperMatchesFilter(paper) {
+            if (!selectedTag) return true;
+            
+            // If selected tag is a "Safety and Alignment" tag, show all papers with any "Safety and Alignment" tag
+            if (selectedTag.startsWith("Safety and Alignment >")) {
+              return paper.tags.some(tag => tag.startsWith("Safety and Alignment >"));
+            }
+            
+            // Otherwise, match exactly
+            return paper.tags.includes(selectedTag);
+          }
+
+          // Render publications
+          function renderPublications() {
+            const container = document.getElementById('publications-container');
+            let html = '';
+
+            // Add reset button if a tag is selected
+            if (selectedTag) {
+              html += `<div style="margin-bottom: 15px;">
+                <button onclick="resetView()" style="padding: 8px 16px; background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; transition: all 0.2s;">
+                  ← Back to all papers
+                </button>
+              </div>`;
+            }
+
+            if (currentView === 'year') {
+              html += renderByYear();
+            } else {
+              html += renderByTag();
+            }
+
+            container.innerHTML = html;
+          }
+
+          // Render papers grouped by year
+          function renderByYear() {
+            const years = [...new Set(papers.map(p => p.year))].sort((a, b) => b - a);
+            let html = '';
+
+            years.forEach(year => {
+              const yearPapers = papers.filter(p => p.year === year);
+              html += `<div class="year-header">${year}</div>`;
+              
+              yearPapers.forEach(paper => {
+                if (paperMatchesFilter(paper)) {
+                  html += renderPaperItem(paper);
+                }
+              });
+            });
+
+            return html;
+          }
+
+          // Render papers grouped by tag
+          function renderByTag() {
+            const allTags = getAllTags();
+            let html = '<div class="tag-filter-container">';
+            
+            allTags.forEach(tag => {
+              const activeClass = selectedTag === tag ? 'active' : '';
+              html += `<button class="tag-filter-btn ${activeClass}" onclick="filterByTag('${tag}')">${tag}</button>`;
+            });
+            
+            html += '</div>';
+
+            // Group papers by tag
+            if (selectedTag) {
+              // If Safety and Alignment is selected, get all papers with any Safety and Alignment tag
+              let tagPapers;
+              if (selectedTag.startsWith("Safety and Alignment >")) {
+                tagPapers = papers.filter(p => p.tags.some(tag => tag.startsWith("Safety and Alignment >")));
+              } else {
+                tagPapers = papers.filter(p => p.tags.includes(selectedTag));
+              }
+              const sortedPapers = tagPapers.sort((a, b) => b.year - a.year);
+              
+              sortedPapers.forEach(paper => {
+                html += renderPaperItem(paper);
+              });
+            } else {
+              // Show all tags as headers
+              allTags.forEach(tag => {
+                const tagPapers = papers.filter(p => p.tags.includes(tag)).sort((a, b) => b.year - a.year);
+                html += `<div class="year-header">${tag}</div>`;
+                
+                tagPapers.forEach(paper => {
+                  html += renderPaperItem(paper);
+                });
+              });
+            }
+
+            return html;
+          }
+
+          // Render individual paper item
+          function renderPaperItem(paper) {
+            const tagHtml = paper.tags.map(tag => {
+              const colors = getTagColor(tag);
+              return `<span class="paper-tag" onclick="filterByTag('${tag}')" style="background-color: ${colors.bg}; color: ${colors.text};">${tag}</span>`;
+            }).join('');
+
+            const noteHtml = paper.note ? `<div class="paper-note">${paper.note}</div>` : '';
+
+            return `
+              <div class="paper-item">
+                <div class="title">
+                  <a href="${paper.link}" target="_blank"><b>${paper.title}</b></a>
+                </div>
+                <div class="authors">
+                  ${paper.authors}
+                </div>
+                ${noteHtml}
+                <div class="venue">
+                  <strong>${paper.venue}</strong> (${paper.year})
+                </div>
+                <div class="paper-tags">
+                  ${tagHtml}
+                </div>
+              </div>
+            `;
+          }
+
+          // Initial render
+          document.addEventListener('DOMContentLoaded', renderPublications);
+        </script>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tbody><tr>
+          <td width="100%" valign="middle">
+          <heading id="patent">Patent</heading>
+      
+          <table>
+            <tbody>
+              <tr>
+                <td width="90%">
+                  <a href="https://patents.google.com/patent/US20240370662A1/en"><b>Intelligent system and method of optimizing natural language processing models </b></a>
+                </td>
+    
+                
+            </tr>
+            </tbody></table>
+          </td></tr></tbody></table>
+
+        <!-- Education -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tbody><tr>
             <td width="100%" valign="middle">
-              <heading>Education</heading>
+              <heading id="education">Education</heading>
               <table>
-                <tbody><tr>
+                  <tr>
+                  <td width="90%">
+                      <br>
+                      <strong>Postdoc</strong> &nbsp&nbsp 2025 - present  <br> 
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp Human-Centered AI Institute (HAI), Stanford University, U.S.<br>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp Postdoc Fellow in HAI
+                      <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp <strong>Advisors:</strong> <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Prof. Alex 'Sandy' Pentland</a>, <a href="https://yejinc.github.io/">Prof. Yejin Choi</a>, <a href="https://www.brynjolfsson.com/">Prof. Erik Brynjolfsson</a> <br>
+                    </td>
+                    <td width="10%">
+                      <img src="images/stanford_logo.png" width="90%" style="display: block; margin-left: auto; margin-right: auto;">
+                    </td>
+                  </tr>
+                  <tr>
                     <td width="90%">
                         <br>
                         <strong>Ph.D.</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2020 - 2024  <br> 
@@ -225,669 +951,11 @@
             </td>
           </tr>
           </tbody></table>
-      
-          
-     
-        <!-- research -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Selected Publications</heading>
-              <p>
-                <!-- My research interests lie at the <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Data Mining</strong>. 
-                I once studied in Biology Science, so my research interests also include the intersection of computer science and biology, 
-                e.g., Computational Biology, Computer Graphics or Visualization on medical data. -->
-                
-              </p>
-            </td>
-          </tr>
-        </table>
-        
-        <div class="grid-container">
-          <div class="text-block">
-            <heading><small><b><span style="color:green">Trustworthy LLM</span></b></small></heading>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/acl2023.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                    [24] <a href="https://arxiv.org/abs/2502.00592"><b>M+: Extending MemoryLLM with Scalable Long-Term Memory </b></a>
-                  </div>
-                  <div class="authors">
-                    Yu Wang, Dmitry Krotov, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, <strong>Zexue He</strong>
-                     <br>
-                  </div>
-                  <div class="venue">
-                     <strong>ICML 2025</strong> .<br>     
-                  </div> 
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%">      <img src="images/tag-hiip.png" width="27%">       -->
-                </td>
-              </tr> 
 
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/acl2023.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                    [23] <a href="https://arxiv.org/abs/2403.00811"><b>Large Scale Knowledge Washing</b></a>
-                  </div>
-                  <div class="authors">
-                    Yu Wang, Ruihan Wu, <strong>Zexue He</strong>, Xiusi Chen, Julian McAuley
-                     <br>
-                  </div>
-                  <div class="venue">
-                     <strong>ICLR 2025</strong>.<br>     
-                  </div> 
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%">      <img src="images/tag-hiip.png" width="27%">       -->
-                </td>
-              </tr> 
-
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/acl2023.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                    [1] <a href="https://arxiv.org/abs/2403.00811"><b>Cognitive Bias in Decision-Making with LLMs </b></a>
-                  </div>
-                  <div class="authors">
-                    Jessica Echterhoff, Yao Liu, Abeer Alessa, Julian McAuley, <strong>Zexue He</strong>
-                     <br>
-                  </div>
-                  <div class="venue">
-                     <strong>EMNLP 2024</strong> .<br>     
-                  </div> 
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%">      <img src="images/tag-hiip.png" width="27%">       -->
-                </td>
-              </tr> 
-
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/acl2023.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                   [2] <a href="https://aclanthology.org/2023.acl-long.474.pdf"><b>Targeted Data Generation: Finding and Fixing Model Weaknesses</b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>, Marco Tulio Ribeiro, Fereshte Khani
-                     <br>
-                  </div>
-                  <div class="venue">
-                     <strong>ACL 2023</strong> .<br>     
-                  </div> 
-                  <!-- <div class="tag"> <img src="images/tag-robustness.png" width="35%">      <img src="images/tag-hiip.png" width="27%">       -->
-    
-                </td>
-              </tr> 
-              
-
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/M4.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [3]  <a href="hhttps://arxiv.org/pdf/2210.07440.pdf"><b>InterFair: Debiasing with Natural Language Feedback for Fair Interpretable Predictions</b></a>
-                  </div>
-                  <div class="authors">
-                    Bodhi Majumder*
-                      <strong>Zexue He*</strong>,
-                      Julian McAuley<br>
-                  </div>
-                  <div class="venue"> <strong>EMNLP 2023</strong>. *Equal.  <br>     
-                              
-                  </div>  
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%">      <img src="images/tag-hiip.png" width="28%">       -->
-     
-                </td>
-              </tr> 
-              
-              
-    
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/nips_ws.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [4]  <a href="https://arxiv.org/abs/2210.07455"><b>Controlling Bias Exposure for Fair Interpretable Predictions</b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>,
-                      Yu Wang,
-                      Julian McAuley,
-                      Bodhisattwa Majumder <br>
-                  </div>
-                  <div class="venue">
-                      <strong>EMNLP2022</strong> Findings<br>                  
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%"> </div> -->
-                </td>
-              </tr> 
-              
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/AAAI2022.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [5]  <a href="https://www.aaai.org/AAAI22Papers/AAAI-4620.XuC.pdf"><b>Leashing the Inner Demons: Self-Detoxification for Language Models</b></a>
-                  </div>
-                  <div class="authors">
-                      Canwen Xu,
-                      <strong>Zexue He</strong>,
-                      Zhankui He,
-                      
-                      Julian McAuley<br>
-                  </div>
-                  <div class="venue">
-                      <strong>AAAI 2022</strong>. <span style="color:orangered"><strong>Press Coverage in UCSD News.</strong><br>                  
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-toxic.png" width="33%"> </div> -->
-    
-                </td>
-              </tr> 
-              <tr>
-                <td width="70%" valign="middle">
-                  <div class="title">
-                   [6] <a href="https://arxiv.org/abs/2109.11708"><b>Detect and Perturb: Neutral Rewriting of Biased and Sensitive Text via Gradient-based Decoding </b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>,
-                      Bodhisattwa Majumder,
-                      
-                      Julian McAuley<br>
-                  </div>
-                  <div class="venue">
-                      <strong>EMNLP 2021</strong> Findings.<br>                  
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-fairness.png" width="30%"> </div> -->
-    
-                </td>
-              </tr>
-              
-              
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/ICLR2.png" width="100%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                   [7] <a href="https://openreview.net/forum?id=rJEjjoR9K7"><b>Learning Robust Representations by Projecting Superficial Statistics Out</b></a>
-                  </div>
-                  <div class="authors">
-                      Haohan Wang,
-                      <strong>Zexue He</strong>,
-                       Zachary C. Lipton,
-                      
-                      Eric P. Xing.<br>
-                  </div>
-                  <div class="venue">
-                      <strong>ICLR 2019</strong>,
-                      <span style="color:orangered"><b>Top 1% Oral</b></span>.<br>
-                      
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-robustness.png" width="33%"> </div> -->
-  
-                </td>
-              </tr> 
-
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/ICLR2.png" width="100%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                   [8] <a href="https://aclanthology.org/D18-1170.pdf"><b>Leveraging gloss knowledge in neural word sense disambiguation by hierarchical co-attention</b></a>
-                  </div>
-                  <div class="authors">
-                    Fuli Luo, Tianyu Liu, <strong>Zexue He</strong>, Qiaolin Xia, Zhifang Sui, Baobao Chang <br>
-                  </div>
-                  <div class="venue">
-                      <strong>EMNLP 2018</strong>
-                      <br>
-                      
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-robustness.png" width="33%"> </div> -->
-  
-                </td>
-              </tr> 
-              <!-- <tr> -->
-                <!-- <td width="40%">
-                  <img src="images/EMNLP.png" width="100%">
-                </td> -->
-                <!-- <td width="100%" valign="middle">
-                  <div class="title">
-                    <a href="https://aclanthology.org/D18-1170/"><b>Leveraging Gloss Knowledge in Neural Word Sense Disambiguation by Hierarchical Co-Attention</b></a>
-                  </div>
-                  <div class="authors">
-                    Fuli Luo,
-                    Tianyu Liu,
-                    <strong>Zexue He</strong>,
-                    Qiaolin Xia,
-                    Zhifang Sui
-                    Baobao Chang.<br> -->
-                    <!-- Fuli Luo,
-                    <a href="https://tyliupku.github.io/">Tianyu Liu</a>,
-                    <u><strong>Zexue He</strong></u>,
-                    <a href="https://dblp.org/pers/hd/x/Xia:Qiaolin">Qiaolin Xia</a>,
-                    <a href="http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6024">Zhifang Sui</a>
-                    <a href="http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6027"> Baobao Chang</a>.<br> -->
-                <!-- </div>
-                  <div class="venue">
-                      <strong>EMNLP 2018</strong> 
-                  </div> -->
-                  <!-- <div class="tag"> <img src="images/tag-robustness.png" width="33%"> </div> -->
-                <!-- </td>
-              </tr> -->
-
-            </table>
-          </div>
-
-          <div class="text-block">
-            <heading><small><b><span style="color:green">AI for Social Good</span></b></small></heading><br>
-            <heading><small><b>Healthcare</b></small></heading>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-               <!-- <tr>
-                
-                <td width="70%" valign="middle">
-                  <div class="title">
-                    <a href="https://arxiv.org/abs/2308.03685"><b>Learning Concise and Descriptive Attributes for Visual Recognition</b></a>
-                  </div>
-                  <div class="authors">An Yan, Yu Wang, Yiwu Zhong, Chengyu Dong, <strong>Zexue He</strong>, Yujie Lu, William Wang, Jingbo Shang, Julian McAuley
-                    <br>
-                  </div>
-                  <div class="venue"> <strong>ICCV 2023</strong>.   
-                            
-                  </div>        
-                  <div class="tag"> <img src="images/tag-multimodal.png" width="17%">    <img src="images/tag-llm-applications.png" width="23%"></div> 
-    
-                </td>
-              </tr>
-              <tr> -->
-                <!-- <td width="30%">
-                  <img src="images/iccv23.png" width="85%">
-                </td> 
-                <td width="100%" valign="middle">
-                  <div class="title">
-                    <a href="https://arxiv.org/pdf/2310.03182.pdf"><b>Mitigating Spurious Correlations for Medical Image Classification via Natural Language Concepts</b></a>
-                  </div>
-                  <div class="authors"> An Yan, Yu Wang, Petros Karypis, <strong>Zexue He</strong>, Amilcare Gentili, Chun-Nan Hsu, Julian McAuley
-                    <br>
-                  </div>
-                  <div class="venue"> <strong>NeurIPS 2023 </strong> Medical Imaging Workshop.   
-                            
-                  </div>        
-                  <div class="tag"> <img src="images/tag-multimodal.png" width="17%">    <img src="images/tag-robustness.png" width="33%"></div> 
-    
-                </td>
-              </tr>
-              <tr>-->
-                <!-- <td width="30%">
-                  <img src="images/emnlp2020_contra.png" width="100%">
-                </td> -->
-              
-              
-              <tr>
-                <!-- <td width="40%">
-                  <img src="images/ICVRV.png" width="100%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                   [9] <a href="https://arxiv.org/abs/2310.14088"><b>A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation</b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>,
-                      Yu Wang, An Yan, Yao Liu, Eric Y Chang, Amilcare Gentili, Julian McAuley, Chun-Nan Hsu <br>
-                  </div>
-                  <div class="venue"> <strong>EMNLP 2023</strong>.   </div>  
-                  <!-- <div class="tag"> <img src="images/tag-llm-applications.png" width="23%"> -->
-                 </div>          
-                        
-                </td>
-              </tr> 
-              <tr>
-                <!-- <td width="30%">
-                  <img src="images/aaai2023.png" width="85%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                   [10] <a href="http://arxiv.org/abs/2305.08300"><b>Disambiguating Medical Reports via Contrastive Knowledge Infusion</b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>,
-                     An Yan, Amilcare Gentili, Julian McAuley, Chun-Nan Hsu<br>
-                  </div>
-                  <div class="venue">
-                    <strong>AAAI 2023</strong>.<br>     
-                  </div>     
-                  <!-- <div class="tag"> <img src="images/tag-llm-applications.png" width="23%"></div>  -->
-       
-                </td>
-              </tr> 
-            <tr>
-              <td width="100%" valign="middle">
-                <div class="title">
-                [11]  <a href="https://arxiv.org/abs/2109.12242"><b>Weakly Supervised Contrastive Learning for Chest X-Ray Report Generation </b></a>
-                </div>
-                <div class="authors">
-                  An Yan, 
-                    <strong>Zexue He</strong>,
-                    Xing Lu. Jiang Du, Eric Chang, Amilcare Gentili, Julian McAuley and Chun-Nan Hsu <br>
-                </div>
-                <div class="venue">
-                  <strong>EMNLP 2021</strong> Findings.<br>                  
-                </div>
-                <!-- <div class="tag"> <img src="images/tag-multimodal.png" width="17%"> </div> -->
-  
-              </td>
-            </tr> 
-            <tr>
-              <!-- <td width="40%">
-                <img src="images/ICVRV.png" width="100%">
-              </td> -->
-              <td width="100%" valign="middle">
-                <div class="title">
-                 [12] <a href="http://openaccess.thecvf.com/content/ICCV2023/papers/Yan_Learning_Concise_and_Descriptive_Attributes_for_Visual_Recognition_ICCV_2023_paper.pdf"><b>Learning Concise and Descriptive Attributes for Visual Recognition </b></a>
-                </div>
-                <div class="authors">
-                    
-                    Yan, A., Wang, Y., Zhong, Y., Dong, C., <strong>He, Z.</strong>, Lu, Y., Wang, W.Y., Shang, J., McAuley, J.<br>
-                </div>
-                <div class="venue"> <strong>ICCV 2023</strong>.   </div>  
-                <!-- <div class="tag"> <img src="images/tag-llm-applications.png" width="23%"> -->
-               </div>             
-              </td>
-            </tr> 
-            <tr>
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [13]  <a href="https://engine.scichina.com/publisher/scp/journal/SCIS/62/10/10.1007/s11432-018-9740-7?slug=fulltext"> <b>Rapid and High-quality 3D Fusion for Human Brain's CT-MRI Heterogeneous Data</b></a>
-                  </div>
-                  <div class="authors">
-                      <strong>Zexue He</strong>,
-                      Li Zhu, 
-                      Minjie Li</a>,
-                      Jinyao Li,
-                      Yiran Chen,
-                      Yanlin Luo.<br>
-                  </div>
-                  <div class="venue">
-                    <b>SCIENCE CHINA Information Sciences</b>.
-                    <!-- Coappear at International Conference of Virtual Reality and Visualization (<b>ICVRV</b>) 2018.<br>  -->
-                  </div>
-                  <div class="tags">
-                    <a href="https://youtu.be/TiAMvpErxBc">Result demo</a> 
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-multimodal.png" width="17%"> </div> -->
-                </td>
-              </tr> 
-            </table>
-
-            <heading><small><b>Accessibility for Low-Resource</b></small></heading>
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tr>                  
-              <td width="100%" valign="middle">
-                <div class="title">
-                [14]  <a href="https://arxiv.org/abs/2212.09864"><b>Synthetic Pre-Training Tasks for Neural  Machine Translation</b></a>
-                </div>
-                <div class="authors">
-                    <strong>Zexue He*</strong>,
-                    Graeme Blackwood*, Rameswar Panda, Julian McAuley, Rogerio Feris<br>
-                </div>
-                <div class="venue">
-                   <strong>ACL2023</strong> Findings. <br>
-                   *Equal Contribution.<br>     
-                   
-                </div>     
-                <!-- <div class="tag"> <img src="images/tag-data-efficiency.png" width="23%">    -->
-  
-              </td>
-              </tr>
-            </table>
-            <heading><small><b>Esthetics</b></small></heading>
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tr>
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [15]  <a href=""><b>Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation</b></a>
-                  </div>
-                  <div class="authors">
-                      
-                      Yu Wang, <strong>Zexue He</strong>, Zhankui He, Hao Xu, Julian McAuley <br>
-                  </div>
-                  <div class="venue">
-                    <strong>AAAI 2024</strong> .<br>     
-                  </div>     
-                  <!-- <div class="tag"> <img src="images/tag-llm-applications.png" width="23%"></div>  -->
-       
-                </td>
-              
-              </tr>
-              
-            
-              
-              
-              
-              
-           </table>
-
-            
-
-
-          </div>
-          <!-- <div class="text-block">
-            <heading><small> <b><span style="color:green">Efficiency</span></b> </small></heading>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-          
-            <td width="100%" valign="middle">
-              <div class="title">
-                <a href="https://arxiv.org/abs/2212.09864"><b>Synthetic Pre-Training Tasks for Neural  Machine Translation</b></a>
-              </div>
-              <div class="authors">
-                  <strong>Zexue He*</strong>,
-                  Graeme Blackwood*, Rameswar Panda, Julian McAuley, Rogerio Feris<br>
-              </div>
-              <div class="venue">
-                 <strong>ACL2023</strong> Findings. <br>
-                 *Equal Contribution.<br>     
-                 
-              </div>     
-              <div class="tag"> <img src="images/tag-data-efficiency.png" width="23%">   
-
-            </td>
-          </tr> 
-          <tr>
-           
-            <td width="100%" valign="middle">
-              <div class="title">
-                <a href="https://arxiv.org/pdf/2310.09983.pdf"><b>Farzi Data: Autoregressive Data Distillation</b></a>
-              </div>
-              <div class="authors">
-                Noveen Sachdeva, <strong>Zexue He</strong>, Wang-Cheng Kang, Jianmo Ni, Derek Zhiyuan Cheng, Julian McAuley
-                <br>
-              </div>
-              <div class="venue">
-                 <strong>Preprint 2023</strong><br>     
-                 
-              </div>     
-              <div class="tag"> <img src="images/tag-data-efficiency.png" width="23%">   
-
-            </td>
-          </tr> 
-
-            </table>
-            
-            
-            
-           </div>
-
-            -->
-       
-        <div class="text-block">
-          <heading><small><b><span style="color:green">Learning from Human Behaviors and Cognitions</span></b></small></heading>
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tr>
-              <!-- <td width="30%">
-                <img src="images/SIGIR.png" width="100%">
-              </td> -->
-              <td width="100%" valign="middle">
-                <div class="title">
-                [16]  <a href="https://arxiv.org/pdf/2409.13265?"><b>Towards lifespan cognitive systems</b></a>
-                </div>
-                <div class="authors">
-                Y. Wang*, C. Han*, T. Wu*, X. He*, W. Zhou, N Sadeq, X Chen, <strong>Zexue He</strong>, W. Wang, G. Haffari, H. Ji, J. McAuley 
-                <br>
-                </div>
-                <div class="venue">
-                    <strong>TMLR 02/2025</strong>  <br>
-                </div>
-                <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-
-              </td>
-            </tr>
-
-            <tr>
-              <!-- <td width="30%">
-                <img src="images/SIGIR.png" width="100%">
-              </td> -->
-              <td width="100%" valign="middle">
-                <div class="title">
-                [17]  <a href="https://dl.acm.org/doi/10.1145/3209978.3210099"><b>CAMELoT: Towards Large Language Models with Training-Free Consolidated Associative Memory</b></a>
-                </div>
-                <div class="authors">
-                  <strong>Zexue He</strong>,
-                  Leonid Karlinsky, Donghyun Kim, Julian McAuley, Dmitry Krotov, Rogerio<br>
-                </div>
-                <div class="venue">
-                    <strong>ICML 2024</strong> LCFM. <span style="color:orangered"><strong>Press Coverage in IBM News.</strong></span>
-                </div>
-                <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-
-              </td>
-            </tr>
-            
-            <tr>
-              <!-- <td width="30%">
-                <img src="images/SIGIR.png" width="100%">
-              </td> -->
-              <td width="100%" valign="middle">
-                <div class="title">
-                [18]  <a href="https://www.arxiv.org/abs/2408.15549"><b>WildFeedback: Aligning LLMs With In-situ User Interactions And Feedbacky</b></a>
-                </div>
-                <div class="authors">
-                  T. Shi, Z. Wang, L. Yang, YC. Lin, <strong>Z. He</strong>, M. Wan, P. Zhou, S. Jauhar, X. Xu, X. Song, J. Neville,
-                 <br>
-                </div>
-                <div class="venue">
-                    <strong>NeurIPS 2024</strong> Behavioral ML <br>
-                </div>
-                <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-
-              </td>
-            </tr>
-
-            <tr>
-              <!-- <td width="30%">
-                <img src="images/SIGIR.png" width="100%">
-              </td> -->
-              <td width="100%" valign="middle">
-                <div class="title">
-                [19]  <a href="https://dl.acm.org/doi/10.1145/3209978.3210099"><b>A Large-Scale Study of Mobile Search Examination Behavior</b></a>
-                </div>
-                <div class="authors">
-                   Xiaochuan Wang,
-                   Ning Su,
-                  <strong>Zexue He</strong>,
-                    Yiqun Liu,
-                    Shaoping Ma.<br>
-                </div>
-                <div class="venue">
-                    <strong>SIGIR 2018</strong> <br>
-                </div>
-                <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-
-              </td>
-            </tr>
-            <!--Chiir -->
-            <tr>
-                <!-- <td width="30%">
-                  <img src="images/CHIIR.png" width="100%">
-                </td> -->
-                <td width="100%" valign="middle">
-                  <div class="title">
-                  [20]  <a href="https://dl.acm.org/doi/10.1145/3176349.3176891"><b>A Two-Stage Model for User's Examination Behavior in Mobile Search</b></a>
-                  </div>
-                  <div class="authors">
-                      Jiaxin Mao,
-                      Yiqun Liu,
-                      Noriko Kando,
-                    <strong>Zeuxe He</strong>,
-                      Min Zhang,
-                      Shaoping Ma.<br>
-                  </div>
-                  <div class="venue">
-                      <strong> CHIIR 2018 </strong> 
-                  </div>
-                  <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-                </td>
-              </tr>
-              <!-- CIKM -->
-              <tr>
-                  <!-- <td width="30%">
-                    <img src="images/CIKM.png" width="100%">
-                  </td> -->
-                  <td width="100%" valign="middle">
-                    <div class="title">
-                    [21]  <a href="https://dl.acm.org/doi/abs/10.1145/3269206.3271764"><b>Understanding Reading Attention Distribution during Relevance Judgment</b></a>
-                    </div>
-                    <div class="authors">
-                       Xiangsheng Li,
-                       Yiqun Liu,
-                       Jiaxin Mao,
-                        <strong>Zexue He</strong>,
-                        Min Zhang,
-                        Shaoping Ma.<br>
-                    </div>
-                    <div class="venue">
-                        <b>CIKM 2018</b>
-                    </div>
-                    <!-- <div class="tag"> <img src="images/tag-hiip.png" width="28%"> </div> -->
-                  </td>
-                </tr>
-        </table>
-        </div>
-      </div>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tbody><tr>
-          <td width="100%" valign="middle">
-          <heading>Patent</heading>
-      
-          <table>
-            <tbody>
-              <tr>
-                <td width="90%">
-                  [22] <a href="https://patents.google.com/patent/US20240370662A1/en"><b>Intelligent system and method of optimizing natural language processing models </b></a>
-                </td>
-    
-                
-            </tr>
-            </tbody></table>
-          </td></tr></tbody></table>
-
-      
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tbody><tr>
             <td width="100%" valign="middle">
-            <heading>Work Experience</heading>
+            <heading id="work-experience">Work Experience</heading>
         
             <table>
               <tbody>
@@ -977,7 +1045,7 @@
           <tbody><tr>
             <td width="100%" valign="middle">
 
-              <heading>Experiences</heading>
+              <heading id="experiences">Research Experiences</heading>
               
               <table>
                 <tbody>
@@ -1067,10 +1135,10 @@
           </tr>
           </tbody></table>
                   <!-- honors and awards -->  
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tbody><tr>
             <td width="100%" valign="middle">
-              <heading>Honors &amp; Awards</heading><br><br>
+              <heading id="honors">Honors &amp; Awards</heading><br><br>
               <strong> Gold Medal</strong> in <strong>International Genetically Engineered Machine Competition (iGEM)</strong> at Boston, Massachusetts, U.S.
               &bull; 2016 <br>
               <strong> Silver Medal</strong> in <strong>International Collegiate Programming Contest at Beijing regional site (ACM/ICPC, Beijing)</strong>
@@ -1081,14 +1149,15 @@
               &bull; 2016 <br>
             </td>
           </tr>
-          </tbody></table>
+          </tbody></table> -->
         
         <!-- scholarships -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tbody><tr>
             <td width="100%" valign="middle">
-              
-              <heading>Scholarships</heading><br><br>
+              <heading id="scholarships and Awards">Scholarships</heading><br><br>
+              <strong>UCSD Chancellor's Dissertation Medal (Finalist) </strong>
+              &bull; 2025 &bull; UCSD<br>
               <strong>IBM Ph.D. Fellowship </strong>
               &bull; 2022-2024 &bull; IBM<br>
               <strong>TwoSigma Ph.D. Fellowship Final Nomination</strong>
@@ -1100,7 +1169,16 @@
               <strong>The First-class Scholarship for Competition Excellence</strong>
               &bull; 2016, 2017, 2018 &bull; Beijing Normal University<br>
               <strong>Google Intern Scholarship</strong>
-              &bull; 2017 &bull; Google Inc.<br><br>
+              &bull; 2017 &bull; Google Inc.<br> <br>
+               <strong> Gold Medal</strong> in <strong>International Genetically Engineered Machine Competition (iGEM)</strong> at Boston, Massachusetts, U.S.
+              &bull; 2016 <br>
+              <strong> Silver Medal</strong> in <strong>International Collegiate Programming Contest at Beijing regional site (ACM/ICPC, Beijing)</strong>
+              &bull; 2016 <br>
+              <strong> Bronze Medal</strong> in <strong>International Collegiate Programming Contest at Dalian regional site (ACM/ICPC, Dalian)</strong>
+              &bull; 2016 <br>
+              <strong> Best Female Team</strong> in <strong>China Collegiate Programming Final Contest (CCPC Final)</strong>
+              &bull; 2016 <br>
+
       
             </td>
           </tr>
