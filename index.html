@@ -342,10 +342,11 @@
                     <tbody>
                       <p>
                         <ul>
-                          <li> <strong> [4/2026]</strong>: Invited talk at Havard CS on <i> From Remembering to Acting: Memory for Long-Horizon Agents </i>. Thanks for inviting me!
-                          <li> <strong> [3/2026]</strong>: I will present at Gates Foundation Workshop on <i> Future of Personal AI: Global Portable Memory Workshop </i> in <strong> Seattle</strong>. </li>
+                          <li> <strong> [4/2026]</strong>: 3 papers accepted to <strong>ICML 2026</strong>!
+                          <li> <strong> [4/2026]</strong>: Invited talk on <i> From Remembering to Acting: Memory for Long-Horizon Agents </i> at <strong>Havard</strong>. Thanks for inviting me.
+                          <li> <strong> [3/2026]</strong>: Gates Foundation Workshop on <i> Future of Personal AI: Global Portable Memory Workshop </i> in <strong> Seattle</strong>. </li>
                           <li> <strong> [2/2026]</strong>: I'm co-organizing the first workshop on <i> Emerging Directions in Data for Multimodal Foundation Models </i> at <strong> CVPR 2026</strong>. </li>
-                          <li> <strong> [10/2025]</strong>: I'm organizing the first workshop on <i> Memory and Vision </i> at <strong>ICCV 2025</strong>. </li>
+                          <li> <strong> [1/2026]</strong>: 3 papers accepted to <strong>ICLR 2026</strong>!
                           <li> <strong> [7/2025]</strong>: I'm organizing the second workshop on <i>Long-Context Foundation Models</i> at <strong>ICML 2025</strong>. </li>
                           <li> <strong> [4/2025]</strong>: Invited panlist on <i> New Frontiers in Associative Memories Workshop </i> at <strong>ICLR 2025</strong>. </li>
                           <li> <strong> [4/2025]</strong>: Invited talk on <i>Safe AI and NLP for High-Stakes Human-Centric Tasks </i> at <strong>Yale</strong>. </li>
@@ -385,6 +386,10 @@
           </tr>
         </table>
         
+        <p style="font-size: 13px; color: #999; margin: 5px 0 15px 0;">
+          <span style="font-style: italic;"> * = Equal contribution/core contributor.    Last author = corresponding author, also as core contributor as first author who usually is my mentee. </span>
+        </p>
+        
         <!-- Publications Container -->
         <div id="publications-container"></div>
 
@@ -421,12 +426,13 @@
             
           {
               id: 29,
-              title: "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+              title: "MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
               link: "https://arxiv.org/pdf/2602.16313",
               authors: "<strong>Zexue He</strong>*, Yu Wang*, Churan Zhi*, Yuanzhe Hu*, Tzu-Ping Chen*, Lang Yin*, Ze Chen, Tong Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland ",
-              venue: "Arxiv Preprint",
+              venue: "ICML (Score: 5, 5, 4, 4)",
               year: 2026,
-              tags: ["LLM Agents", "LLM Memory and Long-context Modeling"],              
+              tags: ["LLM Agents", "LLM Memory and Long-context Modeling"],    
+              note: "3.9k Download Last Month on <a href='https://huggingface.co/datasets/ZexueHe/memoryarena' target='_blank'>Huggingface</a>"          
             },
             {
               id: 30,
@@ -464,6 +470,34 @@
               venue: "ICLR",
               year: 2026,
               tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "LLM"],              
+            },
+            {
+              id: 31,
+              title: "SPARC: Separating Perception And Reasoning Circuits for Test-time Scaling of VLMs",
+              link: "https://arxiv.org/abs/2602.06566",
+              authors: "Niccolo Avogaro, Nayanika Debnath, Li Mi, Thomas Frick, Junling Wang, <strong>Zexue He</strong>, Hang Hua, Konrad Schindler, Mattia Rigotti",
+              venue: "ICML",
+              year: 2026,
+              tags: ["VLM"],              
+            },
+            {
+              id: 32,
+              title: "DocHop: Benchmarking Out-of-domain Multi-hop Reasoning in Information-Dense Documents",
+              link: "",
+              authors: "Zhuoran Yu, Le Thien Phuc Nguyen, Jaden Park, Xinyi Gu, <strong>Zexue He</strong>, Soochahn Lee, Rogerio Feris, Yong Jae Lee",
+              venue: "ICML",
+              year: 2026,
+              tags: ["VLM", "LLM Memory and Long-context Modeling"],              
+            },
+             {
+              id: 33,
+              title: "ChartNet: A Million-Scale, High-Quality Multimodal Dataset for Robust Chart Understanding",
+              link: "https://arxiv.org/abs/2603.27064",
+              authors: "IBM Granite VisionTeam",
+              venue: "CVPR",
+              year: 2026,
+              tags: ["VLM", "LLM Memory and Long-context Modeling"],      
+              note: "14.6k Download Last Month On HuggingFace."        
             },
            
           {
@@ -769,6 +803,11 @@
             return paper.tags.includes(selectedTag);
           }
 
+          // Check if paper is a preprint
+          function isPreprint(paper) {
+            return paper.venue.includes('Arxiv Preprint') || paper.venue.includes('Technical Report');
+          }
+
           // Render publications
           function renderPublications() {
             const container = document.getElementById('publications-container');
@@ -792,13 +831,18 @@
             container.innerHTML = html;
           }
 
-          // Render papers grouped by year
+          // Render papers grouped by year (excluding preprints)
           function renderByYear() {
-            const years = [...new Set(papers.map(p => p.year))].sort((a, b) => b - a);
             let html = '';
+            
+            // Add preprints first
+            html += renderPreprints();
+            
+            const nonPreprintPapers = papers.filter(p => !isPreprint(p));
+            const years = [...new Set(nonPreprintPapers.map(p => p.year))].sort((a, b) => b - a);
 
             years.forEach(year => {
-              const yearPapers = papers.filter(p => p.year === year);
+              const yearPapers = nonPreprintPapers.filter(p => p.year === year);
               html += `<div class="year-header">${year}</div>`;
               
               yearPapers.forEach(paper => {
@@ -806,6 +850,23 @@
                   html += renderPaperItem(paper);
                 }
               });
+            });
+
+            return html;
+          }
+
+          // Render preprints section
+          function renderPreprints() {
+            const preprintPapers = papers.filter(p => isPreprint(p)).sort((a, b) => b.year - a.year);
+            
+            if (preprintPapers.length === 0) return '';
+
+            let html = `<div class="year-header" style="margin-top: 40px;">Preprints</div>`;
+            
+            preprintPapers.forEach(paper => {
+              if (paperMatchesFilter(paper)) {
+                html += renderPreprintItem(paper);
+              }
             });
 
             return html;
@@ -823,30 +884,50 @@
             
             html += '</div>';
 
-            // Group papers by tag
+            // Group papers by tag (excluding preprints)
+            const nonPreprintPapers = papers.filter(p => !isPreprint(p));
+            
             if (selectedTag) {
               // If Safety and Alignment is selected, get all papers with any Safety and Alignment tag
               let tagPapers;
               if (selectedTag.startsWith("Safety and Alignment >")) {
-                tagPapers = papers.filter(p => p.tags.some(tag => tag.startsWith("Safety and Alignment >")));
+                tagPapers = nonPreprintPapers.filter(p => p.tags.some(tag => tag.startsWith("Safety and Alignment >")));
               } else {
-                tagPapers = papers.filter(p => p.tags.includes(selectedTag));
+                tagPapers = nonPreprintPapers.filter(p => p.tags.includes(selectedTag));
               }
               const sortedPapers = tagPapers.sort((a, b) => b.year - a.year);
               
               sortedPapers.forEach(paper => {
                 html += renderPaperItem(paper);
               });
+
+              // Add preprints with the selected tag
+              const preprintPapers = papers.filter(p => isPreprint(p) && p.tags.includes(selectedTag)).sort((a, b) => b.year - a.year);
+              if (preprintPapers.length > 0) {
+                html += `<div class="year-header" style="margin-top: 40px;">Preprints</div>`;
+                preprintPapers.forEach(paper => {
+                  html += renderPreprintItem(paper);
+                });
+              }
             } else {
               // Show all tags as headers
               allTags.forEach(tag => {
-                const tagPapers = papers.filter(p => p.tags.includes(tag)).sort((a, b) => b.year - a.year);
+                const tagPapers = nonPreprintPapers.filter(p => p.tags.includes(tag)).sort((a, b) => b.year - a.year);
                 html += `<div class="year-header">${tag}</div>`;
                 
                 tagPapers.forEach(paper => {
                   html += renderPaperItem(paper);
                 });
               });
+
+              // Add preprints section
+              const allPreprints = papers.filter(p => isPreprint(p)).sort((a, b) => b.year - a.year);
+              if (allPreprints.length > 0) {
+                html += `<div class="year-header" style="margin-top: 40px;">Preprints</div>`;
+                allPreprints.forEach(paper => {
+                  html += renderPreprintItem(paper);
+                });
+              }
             }
 
             return html;
@@ -872,6 +953,40 @@
                 ${noteHtml}
                 <div class="venue">
                   <strong>${paper.venue}</strong> (${paper.year})
+                </div>
+                <div class="paper-tags">
+                  ${tagHtml}
+                </div>
+              </div>
+            `;
+          }
+
+          // Render individual preprint item (with year inline)
+          function renderPreprintItem(paper) {
+            const tagHtml = paper.tags.map(tag => {
+              const colors = getTagColor(tag);
+              return `<span class="paper-tag" onclick="filterByTag('${tag}')" style="background-color: ${colors.bg}; color: ${colors.text};">${tag}</span>`;
+            }).join('');
+
+            const noteHtml = paper.note ? `<div class="paper-note">${paper.note}</div>` : '';
+            
+            // Extract venue type (Arxiv or Technical Report)
+            let venueLabel = 'Arxiv';
+            if (paper.venue.includes('Technical Report')) {
+              venueLabel = 'Technical Report';
+            }
+
+            return `
+              <div class="paper-item">
+                <div class="title">
+                  <a href="${paper.link}" target="_blank"><b>${paper.title}</b></a>
+                </div>
+                <div class="authors">
+                  ${paper.authors}
+                </div>
+                ${noteHtml}
+                <div class="venue">
+                  ${venueLabel} ${paper.year}
                 </div>
                 <div class="paper-tags">
                   ${tagHtml}
