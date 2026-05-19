@@ -283,7 +283,7 @@
 
               </p>
                 <p>
-                  I previously spent two years as a Research Scientist at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a>, responsible for the safety and alignment training of IBM's multimodal foundation models (<a href="https://huggingface.co/ibm-granite">Granite Vision Series</a>). I also worked as an intern at the Microsoft Research and Google. <br><br>
+                  I previously spent two years as a Research Scientist at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a>, responsible for the post training (safety and alignment) of IBM's foundation models (<a href="https://huggingface.co/ibm-granite">Granite Vision Series</a>). I also worked as an intern at the Microsoft Research and Google. <br><br>
                 </p>
                 <p align="center">
                   <b>Contact:</b> <span style="color:#1772d0">zexueh [AT] stanford.edu</span> | <span style="color:#1772d0">zehe [AT] ucsd.edu</span>  <br> <b>Full Publications:</b> <a href="https://scholar.google.com/citations?user=Srp8J9wAAAAJ&hl=en">Google Scholar</a>
@@ -311,6 +311,51 @@
         </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tbody>
+
+    <tr style="background-color: #f0f4f8;">
+      <td width="100%" valign="middle">
+        <heading id="news">Research Highlights</heading>
+        <table>
+          <tbody>
+            <tr>
+              <td style="padding: 8px 4px;">
+                <p style="line-height: 1.65; color: #2d3748; margin: 0 0 18px 0;">
+                  My research builds <strong>post-training</strong> and <strong>inference-time methods</strong> that make <strong>LLMs</strong> and Vision-Language Models (<strong>VLMs</strong>) more capable and reliable &mdash; spanning <strong>core capabilities</strong> (reasoning, long-context modeling, coding) as well as <strong>safety and alignment</strong>.
+                </p>
+
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px; line-height: 1.6;">
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Post-training for Reasoning &amp; Alignment</div>
+                    <span style="color: #2d3748;">
+                      SFT [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>], mid-training [<a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>], RL and reward modeling [<a href="https://arxiv.org/abs/2510.15040">COGS</a>] for foundation model; Preference alignment and safety [<a href="https://arxiv.org/abs/2502.09927">Granite Vision</a>, <a href="https://www.aaai.org/AAAI22Papers/AAAI-4620.XuC.pdf">Detoxification</a>, <a href="https://arxiv.org/abs/2408.15549">WildFeedback</a>].  <br> Inference-time computing for agentic reasoning [<a href="https://arxiv.org/pdf/2512.23631">SWE Bandit</a>, <a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>].
+                    </span>
+                  </li>
+
+                  <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px; line-height: 1.6;">
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Long-Context &amp; Memory-Augmented LLMs</div>
+                    <span style="color: #2d3748;">
+                      Efficient memory mechanisms [<a href="https://arxiv.org/abs/2502.00592">M+</a>, <a href="https://arxiv.org/abs/2401.0000">CAMELoT</a>] and RAG for multi-step stateful agents, and long-horizon decision-making [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>,  <a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>].
+                    </span>
+                  </li>
+
+                  <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 0; line-height: 1.6;">
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Synthetic Data for Training and Evaluation</div>
+                    <span style="color: #2d3748;">
+                      Targeted synthetic data generation for SFT/RL training [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>, <a href="https://arxiv.org/abs/2510.15040">COGS</a>, <a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>]. Benchmarking [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>, <a href="https://arxiv.org/abs/2603.27064">ChartNet</a>] and stress testing [<a href="https://arxiv.org/abs/2510.00232">BiasFreeBench</a>, <a href="https://arxiv.org/abs/2403.00811">CogBias</a>].
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr style="background-color: #f0f4f8;">
                 <td width="100%" valign="middle">
                   <heading id="news">Research Highlights</heading>
@@ -318,22 +363,26 @@
                     <tbody>
                       <p>
                           
-                   My research advances human-centered Large Language Models and Vision-Language Models that can remember, reason, and act reliably in complex and failure-prone decision-making settings:
+                  My research builds <strong>post-training</strong> and <strong>inference-time methods</strong> that make LLMs and Vision-Language Models (VLMs) more capable, controllable, and reliable -- spanning <strong>general capabilities (reasoning, long-context modeling, coding)</strong> as well as <strong>safety and alignment</strong>.
                   <ul>
-                  <li><strong><span style="color:black"> When models must be safe and aligned with humans</span></strong>: I work on LLM safety and alignment, building loyal agents and personalized AI systems that reason under uncertainty while respecting diverse human preferences.</li>
-                  <li> <strong> <span style="color:black"> When the modeling horizon is long</span></strong>: 
-                  I develop memory-augmented LLMs and agentic architectures that support persistent state tracking, structured long-context reasoning, and multi-session decision-making.
-                 </li>
-                  <li><strong> <span style="color:black"> When applications are high-stakes:</span> </strong>: I design and evaluate the reliability and societal impact LLMs for human-centered domains such as healthcare, low-resource settings, education, and employment. </li>
+                  <li><strong><span style="color:black"> Post-training for Reasoning & Alignment</span></strong>: SFT [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>], mid-training  [<a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>], RL and reward modeling [<a href="https://arxiv.org/abs/2510.15040">COGS</a>] for foundation model reasoning;  preference alignment and foundation model safety [<a href="https://arxiv.org/abs/2502.09927">Granite Vision</a>, <a href="https://arxiv.org/abs/2408.15549">WildFeedback</a>]. Inference-time computing for agentic reasoning [<a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>, <a href="https://arxiv.org/pdf/2512.23631">SWE Bandit</a>].</li>
+                  <li><strong><span style="color:black"> Long-Context & Memory-Augmented Architectures</span></strong>: efficient memory mechanisms [<a href="https://arxiv.org/abs/2502.00592">M+</a>, <a href="https://arxiv.org/abs/2401.0000">CAMELoT</a>];  RAG for multi-step reasoning, stateful agents, and long-horizon decision-making [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>]. </li>
+                  <li><strong><span style="color:black"> Synthetic Data for Training and Evaluation</span></strong>: targeted synthetic data generation for SFT/RL training [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>, <a href="https://arxiv.org/abs/2510.15040">COGS</a>, <a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>], benchmarking [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>, <a href="https://arxiv.org/abs/2603.27064">ChartNet</a>], and domain-specific stress test [<a href="https://arxiv.org/abs/2510.00232">BiasFreeBench</a>, <a href="https://arxiv.org/abs/2403.00811">CogBias</a>].</li>
                   </ul>
                       </p>
-                    </tbody>
+                
+                  <strong> 
+               <span style="color:black"> tdlr: My research usually proposes novel <span style="color:green">training-based (SFT and RL)</span> or <span style="color:green"> data-based (augmentation and eval) </span> solutions during model's <span style="color:green">post-training</span> and <span style="color:green">inference time</span> </span>  -->
+              
+
+                    <!-- </tbody>
                    </table>
                 </td>
                 </tr>
               </tbody>
-        </table>
-        
+
+        </table> -->
+         
             <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="100%" valign="middle">
@@ -386,8 +435,8 @@
           </tr>
         </table>
         
-        <p style="font-size: 13px; color: #999; margin: 5px 0 15px 0;">
-          <span style="font-style: italic;"> * = Equal contribution/core contributor.    Last author = corresponding author, also as core contributor as first author who usually is my mentee. </span>
+        <p style="font-size: 17px; color: #999; margin: 5px 0 15px 0;">
+          <span style="font-style: italic;"> * = Equal contribution/core contributor.  Last author = corresponding author, also as core contributor as first author (who usually is my mentee). </span>
         </p>
         
         <!-- Publications Container -->
@@ -396,7 +445,7 @@
         <script>
           // Tag color scheme - assign each tag a unique color
           const tagColors = {
-            "LLM Memory and Long-context Modeling": { bg: "#e3f2fd", text: "#1565c0" },
+            "Memory and Long-context Modeling": { bg: "#e3f2fd", text: "#1565c0" },
             "LLM": { bg: "#f3e5f5", text: "#6a1b9a" },
             "CV": { bg: "#f3e5f5", text: "#6a1b9a" },
             "VLM": { bg: "#f3e5f5", text: "#6a1b9a" },
@@ -404,9 +453,9 @@
             "Safety and Alignment > Toxicity, Bias and Fairness": { bg: "#e8f5e9", text: "#1b5e20" },
             "Safety and Alignment > Interpretability": { bg: "#e8f5e9", text: "#1b5e20" },
             "Safety and Alignment > Disambiguation": { bg: "#e8f5e9", text: "#1b5e20" },
-            "LLM Agents": { bg: "#ede7f6", text: "#3f51b5" },
+            "Agents": { bg: "#ede7f6", text: "#3f51b5" },
             "Reinforcement Learning":{ bg: "#eceff1", text: "#37474f" },
-            "Synthetic Data Generation": { bg: "#f3e5f5", text: "#7b1fa2" },
+            "Synthetic Data": { bg: "#f3e5f5", text: "#7b1fa2" },
             "AI for Healthcare": { bg: "#ffebee", text: "#b71c1c" },
             "AI for Low-Resource Languages": { bg: "#ede7f6", text: "#512da8" },
             "Long-context Modeling": { bg: "#e3f2fd", text: "#1565c0" },
@@ -431,17 +480,17 @@
               authors: "<strong>Zexue He</strong>*, Yu Wang*, Churan Zhi*, Yuanzhe Hu*, Tzu-Ping Chen*, Lang Yin*, Ze Chen, Tong Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland ",
               venue: "ICML (Score: 5, 5, 4, 4)",
               year: 2026,
-              tags: ["LLM Agents", "LLM Memory and Long-context Modeling"],    
+              tags: ["Agents", "Memory and Long-context Modeling"],    
               note: "3.9k Download Last Month on <a href='https://huggingface.co/datasets/ZexueHe/memoryarena' target='_blank'>Huggingface</a>"          
             },
             {
               id: 30,
-              title: "Decocted Experience Improves Test-Time Inference in LLM Agents",
+              title: "Decocted Experience Improves Test-Time Inference in Agents",
               link: "https://arxiv.org/pdf/2604.04373",
               authors: "Maohao Shen*, Kaiwen Zha*, <strong>Zexue He*</strong>, Zhang-Wei Hong, Siru Ouyang, J Jon Ryu, Prasanna Sattigeri, Suhas Diggavi, Gregory Wornell",
               venue: "Arxiv Preprint",
               year: 2026,
-              tags: ["LLM Agents", "LLM Memory and Long-context Modeling"],              
+              tags: ["Agents", "Memory and Long-context Modeling"],              
             },
           {
               id: 28,
@@ -460,7 +509,7 @@
               authors: "Iris Xu, Guangtao Zeng, <strong>Zexue He</strong>, Charles Jin, Aldo Pareja, Dan Gutfreund, Chuang Gan, Zhang-Wei Hong",
               venue: "ICLR",
               year: 2026,
-              tags: ["LLM Agents", "Reinforcement Learning"],              
+              tags: ["Agents", "Reinforcement Learning"],              
             },
           {
               id: 26,
@@ -487,7 +536,7 @@
               authors: "Zhuoran Yu, Le Thien Phuc Nguyen, Jaden Park, Xinyi Gu, <strong>Zexue He</strong>, Soochahn Lee, Rogerio Feris, Yong Jae Lee",
               venue: "ICML",
               year: 2026,
-              tags: ["VLM", "LLM Memory and Long-context Modeling"],              
+              tags: ["VLM", "Memory and Long-context Modeling", "Synthetic Data"],              
             },
              {
               id: 33,
@@ -496,7 +545,7 @@
               authors: "IBM Granite VisionTeam",
               venue: "CVPR",
               year: 2026,
-              tags: ["VLM", "LLM Memory and Long-context Modeling"],      
+              tags: ["VLM", "Memory and Long-context Modeling"],      
               note: "14.6k Download Last Month On HuggingFace."        
             },
            
@@ -519,7 +568,7 @@
               authors: "Yu Wang, Dmitry Krotov, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, <strong>Zexue He</strong>",
               venue: "ICML 2025",
               year: 2025,
-              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling", "LLM"],
+              tags: ["Memory and Long-context Modeling", "LLM"],
             },
             {
               id: 23,
@@ -537,7 +586,7 @@
               authors: "J. Kondic, P. Li, D. Joshi, <strong>Zexue He</strong>, S. Abedin, J. Sun, B. Wiesel, E. Schwartz, A. Nassar, B. Wu, A. Arbelle, A. Oliva, D. Gutfreund, L. Karlinsky, R. Feris",
               venue: "ICCV Workshop on Curated Data for Efficient Learning",
               year: 2025,
-              tags: ["VLM", "Synthetic Data Generation"],              
+              tags: ["VLM", "Synthetic Data "],              
             },
             {
               id: 1,
@@ -546,7 +595,7 @@
               authors: "Jessica Echterhoff, Yao Liu, Abeer Alessa, Julian McAuley, <strong>Zexue He</strong>",
               venue: "EMNLP",
               year: 2024,
-              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "Cognition-inspired Modeling", "LLM"],
+              tags: ["Safety and Alignment > Toxicity, Bias and Fairness", "LLM"],
               highlight: true
             },
             {
@@ -556,7 +605,7 @@
               authors: "<strong>Zexue He</strong>, Marco Tulio Ribeiro, Fereshte Khani",
               venue: "ACL",
               year: 2023,
-              tags: ["Safety and Alignment > Robustness", "Synthetic Data Generation", "Human-AI Collaboration", "LLM"]
+              tags: ["Safety and Alignment > Robustness", "Synthetic Data", "Human-AI Collaboration", "LLM"]
             },
             {
               id: 3,
@@ -667,7 +716,7 @@
               authors: "<strong>Zexue He*</strong>, Graeme Blackwood*, Rameswar Panda, Julian McAuley, Rogerio Feris",
               venue: "ACL (Findings)",
               year: 2023,
-              tags: ["Synthetic Data Generation", "AI for Low-Resource Languages", "LLM", "Safety and Alignment > Toxicity, Bias and Fairness"]
+              tags: ["Synthetic Data", "AI for Low-Resource Languages", "LLM", "Safety and Alignment > Toxicity, Bias and Fairness"]
             },
             {
               id: 15,
@@ -685,7 +734,7 @@
               authors: "Y. Wang*, C. Han*, T. Wu*, X. He*, W. Zhou, N Sadeq, X Chen, <strong>Zexue He</strong>, W. Wang, G. Haffari, H. Ji, J. McAuley",
               venue: "TMLR 02/2025",
               year: 2025,
-              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling" ],
+              tags: ["Memory and Long-context Modeling" ],
             },
             {
               id: 17,
@@ -694,7 +743,7 @@
               authors: "<strong>Zexue He</strong>, Leonid Karlinsky, Donghyun Kim, Julian McAuley, Dmitry Krotov, Rogerio Feris",
               venue: "ICML, Long-Context Foundation Model Workshop",
               year: 2024,
-              tags: ["LLM Memory and Long-context Modeling", "Cognition-inspired Modeling", "LLM"],
+              tags: ["Memory and Long-context Modeling", "LLM"],
               highlight: true
             },
             {
@@ -702,9 +751,9 @@
               title: "WildFeedback: Aligning LLMs With In-situ User Interactions And Feedback",
               link: "https://arxiv.org/abs/2408.15549",
               authors: "T. Shi, Z. Wang, L. Yang, YC. Lin, <strong>Z. He</strong>, M. Wan, P. Zhou, S. Jauhar, X. Xu, X. Song, J. Neville",
-              venue: "NeurIPS, Behavioral ML Workshop",
-              year: 2024,
-              tags: ["Learning from Interactions", "LLM"]
+              venue: "ACL 2026",
+              year: 2026,
+              tags: ["LLM", "Synthetic Data"]
             },
             {
               id: 30,
@@ -713,8 +762,8 @@
               authors: "Yu Wang, Zeyuan Zhang, Julian McAuley, <strong>Zexue He</strong>",
               venue: "Arxiv Preprint",
               year: 2024,
-              tags: ["LLM Memory and Long-context Modeling", "VLM"],
-              highlight: true
+              tags: ["Memory and Long-context Modeling", "VLM"],
+              highlight: false
             },
             {
               id: 19,
