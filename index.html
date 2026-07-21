@@ -278,12 +278,12 @@
               <p align="center">
                 <name>Zexue He</name>
               </p>
-              <p>I'm a Postdoc Fellow at Human-Centered AI Institude (HAI) in Stanford University, working with <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Alex 'Sandy' Pentland </a>, <a href="https://yejinc.github.io/">Yejin Choi </a>. 
+              <p>I'm a Postdoc Fellow at Human-Centered AI Institude (HAI) in Stanford University, working with <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Alex 'Sandy' Pentland </a> and <a href="https://yejinc.github.io/">Yejin Choi </a>. 
               I recieved my Ph.D. </a> in Computer Science and Engineering department at University of California, San Diego, advised by <a href="https://cseweb.ucsd.edu/~jmcauley/"> Prof. Julian McAuley</a>, and was honored to be awarded the <a href="https://research.ibm.com/university/awards/fellowships.html">IBM PhD Fellowship in 2022</a>. 
 
               </p>
                 <p>
-                  I previously spent two years as a Research Scientist at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a>, responsible for the post training (safety and alignment) of IBM's foundation models (<a href="https://huggingface.co/ibm-granite">Granite Vision Series</a>). I also worked as an intern at the Microsoft Research and Google. <br><br>
+                  I previously spent two years as a Research Scientist at the <a href="https://mitibmwatsonailab.mit.edu/"> MIT-IBM Lab </a>, responsible for long-context efficiency and post training (safety and alignment) of IBM's foundation models (<a href="https://huggingface.co/ibm-granite">Granite Vision Series</a>). I also worked as an intern at the Microsoft Research and Google. <br><br>
                 </p>
                 <p align="center">
                   <b>Contact:</b> <span style="color:#1772d0">zexueh [AT] stanford.edu</span> | <span style="color:#1772d0">zehe [AT] ucsd.edu</span>  <br> <b>Full Publications:</b> <a href="https://scholar.google.com/citations?user=Srp8J9wAAAAJ&hl=en">Google Scholar</a>
@@ -321,28 +321,36 @@
             <tr>
               <td style="padding: 8px 4px;">
                 <p style="line-height: 1.65; color: #2d3748; margin: 0 0 18px 0;">
-                  My research builds <strong>post-training</strong> and <strong>inference-time methods</strong> that make <strong>LLMs</strong> and Vision-Language Models (<strong>VLMs</strong>) more capable and reliable &mdash; spanning <strong>core capabilities</strong> (reasoning, long-context modeling, coding) as well as <strong>safety and alignment</strong>.
+                  <!-- My research builds <strong>post-training</strong> and <strong>inference-time methods</strong> that make <strong>LLMs</strong> and Vision-Language Models (<strong>VLMs</strong>) more capable and reliable &mdash; spanning <strong>core capabilities</strong> (reasoning, long-context modeling, coding) as well as <strong>safety and alignment</strong>. -->
+                My research builds <strong>long-context foundation models (LLMs/VLMs)</strong> and <strong>long-horizon agents</strong> that can reliably reason and act over extended contexts. 
+                I push the capability frontier of LLMs via scalable  <strong>synthetic data methods</strong> and <strong>modeling and training</strong> approaches, 
                 </p>
 
                 <ul style="list-style: none; padding: 0; margin: 0;">
                   <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px; line-height: 1.6;">
-                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Post-training for Reasoning &amp; Alignment</div>
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Synthetic Training/Data for Foundation Models</div>
                     <span style="color: #2d3748;">
-                      SFT [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>], mid-training [<a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>], RL and reward modeling [<a href="https://arxiv.org/abs/2510.15040">COGS</a>] for foundation model; Preference alignment and safety [<a href="https://arxiv.org/abs/2502.09927">Granite Vision</a>, <a href="https://www.aaai.org/AAAI22Papers/AAAI-4620.XuC.pdf">Detoxification</a>, <a href="https://arxiv.org/abs/2408.15549">WildFeedback</a>].  <br> Inference-time computing for agentic reasoning [<a href="https://arxiv.org/pdf/2512.23631">SWE Bandit</a>, <a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>].
+                      Synthetic SFT [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>];<br> Synthetic Pretraining [<a href="https://arxiv.org/abs/2212.09864">for Data Scarcity</a>] and Mid-training [<a href="https://arxiv.org/pdf/2502.00592"> for Long-context Extension</a>]; <br> Synthetic RL [<a href="https://arxiv.org/abs/2510.15040">COGS</a>]; <br>
+                      Synthetic Tool Generation for Agentic Reasoning [<a href="https://arxiv.org/pdf/2512.23631">SWE Bandit</a>].
                     </span>
                   </li>
 
                   <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px; line-height: 1.6;">
-                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Long-Context &amp; Memory-Augmented LLMs</div>
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Long-Context LLMs and Stateful Agents</div>
                     <span style="color: #2d3748;">
-                      Efficient memory mechanisms [<a href="https://arxiv.org/abs/2502.00592">M+</a>, <a href="https://arxiv.org/abs/2401.0000">CAMELoT</a>] and RAG for multi-step stateful agents, and long-horizon decision-making [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>,  <a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>].
+                      Efficient memory mechanisms [<a href="https://arxiv.org/abs/2502.00592">M+</a>, <a href="https://arxiv.org/abs/2401.0000">CAMELoT</a>]; <br>  multi-step stateful agent under  partial observable environments [<a href="https://arxiv.org/pdf/2607.16412">POMDP</a>], <br> 
+                      and long-horizon decision-making [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>,  <a href="https://arxiv.org/pdf/2604.04373">Decocted Experience</a>].
                     </span>
                   </li>
 
                   <li style="background: #ffffff; border-left: 3px solid #4a7ba6; border-radius: 4px; padding: 12px 16px; margin-bottom: 0; line-height: 1.6;">
-                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">Synthetic Data for Training and Evaluation</div>
+                    <div style="color: #1a2942; font-weight: 600; margin-bottom: 4px;">LLM Safety, Alignment and Evaluation</div>
                     <span style="color: #2d3748;">
-                      Targeted synthetic data generation for SFT/RL training [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>, <a href="https://arxiv.org/abs/2510.15040">COGS</a>, <a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>]. Benchmarking [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>, <a href="https://arxiv.org/abs/2603.27064">ChartNet</a>] and stress testing [<a href="https://arxiv.org/abs/2510.00232">BiasFreeBench</a>, <a href="https://arxiv.org/abs/2403.00811">CogBias</a>].
+                      <!-- Targeted synthetic data generation for SFT/RL training [<a href="https://aclanthology.org/2023.acl-long.474.pdf">TDG</a>, <a href="https://arxiv.org/abs/2510.15040">COGS</a>, <a href="https://arxiv.org/abs/2212.09864">Synthetic Pretrain</a>].  -->
+                      <!-- Benchmarking [<a href="https://arxiv.org/pdf/2602.16313">MemoryArena</a>, <a href="https://arxiv.org/abs/2603.27064">ChartNet</a>] -->
+                      
+                      Preference alignment and safety [<a href="https://arxiv.org/abs/2502.09927">Granite Vision</a>, <a href="https://www.aaai.org/AAAI22Papers/AAAI-4620.XuC.pdf">Detoxification</a>, <a href="https://arxiv.org/abs/2408.15549">WildFeedback</a>]
+                      and stress testing [<a href="https://arxiv.org/abs/2510.00232">BiasFreeBench</a>, <a href="https://arxiv.org/abs/2403.00811">CogBias</a>].
                     </span>
                   </li>
                 </ul>
@@ -391,8 +399,9 @@
                     <tbody>
                       <p>
                         <ul>
+                          <li> <strong> [7/2026]</strong>: I'm organizing the Third Workshop on <i>Long-Context Foundation Models</i> at <strong>NeurIPS 2026</strong> at Atlanta. </li>
                           <li> <strong> [4/2026]</strong>: 3 papers accepted to <strong>ICML 2026</strong>!
-                          <li> <strong> [4/2026]</strong>: Invited talk on <i> From Remembering to Acting: Memory for Long-Horizon Agents </i> at <strong>Havard</strong>. Thanks for inviting me.
+                          <li> <strong> [4/2026]</strong>: Invited talk on <i> From Remembering to Acting: Memory for Long-Horizon Agents </i> at <strong>Harvard University</strong>. Thanks for inviting me.
                           <li> <strong> [3/2026]</strong>: Gates Foundation Workshop on <i> Future of Personal AI: Global Portable Memory Workshop </i> in <strong> Seattle</strong>. </li>
                           <li> <strong> [2/2026]</strong>: I'm co-organizing the first workshop on <i> Emerging Directions in Data for Multimodal Foundation Models </i> at <strong> CVPR 2026</strong>. </li>
                           <li> <strong> [1/2026]</strong>: 3 papers accepted to <strong>ICLR 2026</strong>!
@@ -454,6 +463,7 @@
             "Safety and Alignment > Interpretability": { bg: "#e8f5e9", text: "#1b5e20" },
             "Safety and Alignment > Disambiguation": { bg: "#e8f5e9", text: "#1b5e20" },
             "Agents": { bg: "#ede7f6", text: "#3f51b5" },
+            "POMDP": { bg: "#e3f2fd", text: "#1565c0" },
             "Reinforcement Learning":{ bg: "#eceff1", text: "#37474f" },
             "Synthetic Data": { bg: "#f3e5f5", text: "#7b1fa2" },
             "AI for Healthcare": { bg: "#ffebee", text: "#b71c1c" },
@@ -472,23 +482,51 @@
 
           // Publication data with tags and year
           const papers = [
-            
+            {
+              id: 32,
+              title: "Interactive Task Alignment as a POMDP",
+              link: "https://arxiv.org/pdf/2607.16412",
+              authors: "Andy Dai*,  <strong>Zexue He*</strong>, Zhenyu Zhang, Alex Pentland, Jiaxin Pei",
+              venue: "Arxiv Preprint",
+              year: 2026,
+              tags: ["Agents", "POMDP", "Reinforcement Learning"],              
+            },
+              {
+              id: 33,
+              title: "Learning User Simulators with Turing Rewards",
+              link: "https://arxiv.org/pdf/2607.16412",
+              authors: "Susan Wang*,  Ced Zhang*, Linlu Qiu*, <strong>Zexue He*</strong>, Pengyuan Li, Alex Pentland, Roger Levy, Yoon Kim",
+              venue: "Arxiv Preprint",
+              year: 2026,
+              tags: [ "Reinforcement Learning"],              
+            },
+
+            {
+              id: 34,
+              title: "Learning More from Less: Reinforcement Learning from Hindsight",
+              link: "https://arxiv.org/pdf/2607.09042",
+              authors: "I. Xu, S. Jiang, J. Marangola, N. Dashora, R. Li, T. Liu, <strong>Z. He</strong>, Y. Zhi, A. Pentland, P. Agrawal, Z.W. Hong",
+              venue: "Arxiv Preprint",
+              year: 2026,
+              tags: ["Reinforcement Learning"],              
+            },
           {
+            
               id: 29,
               title: "MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
               link: "https://arxiv.org/pdf/2602.16313",
               authors: "<strong>Zexue He</strong>*, Yu Wang*, Churan Zhi*, Yuanzhe Hu*, Tzu-Ping Chen*, Lang Yin*, Ze Chen, Tong Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland ",
               venue: "ICML (Score: 5, 5, 4, 4)",
               year: 2026,
-              tags: ["Agents", "Memory and Long-context Modeling"],    
-              note: "6.4k Download Last Month on <a href='https://huggingface.co/datasets/ZexueHe/memoryarena' target='_blank'>Huggingface</a>"          
+              tags: ["Agents", "Memory and Long-context Modeling", "POMDP"],    
+              note: "17.1k Download Last Month on <a href='https://huggingface.co/datasets/ZexueHe/memoryarena' target='_blank'>Huggingface</a>"          
             },
             {
-              id: 30,
+              id: 31,
               title: "Decocted Experience Improves Test-Time Inference in Agents",
               link: "https://arxiv.org/pdf/2604.04373",
               authors: "Maohao Shen*, Kaiwen Zha*, <strong>Zexue He*</strong>, Zhang-Wei Hong, Siru Ouyang, J Jon Ryu, Prasanna Sattigeri, Suhas Diggavi, Gregory Wornell",
-              venue: "Arxiv Preprint",
+              venue: "COLM 2026",
               year: 2026,
               tags: ["Agents", "Memory and Long-context Modeling"],              
             },
@@ -760,7 +798,7 @@
               title: "Lvchat: Facilitating long video comprehension",
               link: "https://arxiv.org/abs/2401.00000",
               authors: "Yu Wang, Zeyuan Zhang, Julian McAuley, <strong>Zexue He</strong>",
-              venue: "Arxiv Preprint",
+              venue: "ACL'26 Workshop",
               year: 2024,
               tags: ["Memory and Long-context Modeling", "VLM"],
               highlight: false
@@ -1076,7 +1114,7 @@
                       <strong>Postdoc</strong> &nbsp&nbsp 2025 - present  <br> 
                       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp Human-Centered AI Institute (HAI), Stanford University, U.S.<br>
                       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp Postdoc Fellow in HAI
-                      <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp <strong>Advisors:</strong> <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Prof. Alex 'Sandy' Pentland</a>, and <a href="https://yejinc.github.io/">Prof. Yejin Choi</a>, <a href="https://www.brynjolfsson.com/">Prof. Erik Brynjolfsson</a> <br>
+                      <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp <strong>Advisors:</strong> <a href="https://en.wikipedia.org/wiki/Alex_Pentland">Prof. Alex 'Sandy' Pentland</a>, and <a href="https://yejinc.github.io/">Prof. Yejin Choi</a><br>
                     </td>
                     <td width="10%">
                       <img src="images/stanford_logo.png" width="90%" style="display: block; margin-left: auto; margin-right: auto;">
